@@ -1,0 +1,126 @@
+/* VARIABLES - COLORS */
+
+:root {
+    --primary-default: #072AC8;
+    --accent: #43D2FF;
+    --primary-hover: #A2D6F9;
+    --primary-tapped: #D1EDFF;
+    --neutral-dark: #292E47;
+    --neutral-medium: #6B708D;
+    --neutral-light: #F2F4FC;
+    --neutral-light-blue: #ECF7FF;
+    --secondary: #FFC600;
+    --secondary-white: #FFFFFF;
+  }
+
+/* GENERAL HTML DOC */
+
+html, h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--neutral-dark)
+}
+
+p, li {
+    color: var(--neutral-medium)
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+    background-color: var(--neutral-light);
+}
+
+/* MAIN ELEMENTS */
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 24x;
+    font-weight: 700;
+}
+
+ul {
+    list-style: none
+}
+
+article {
+    background-color: var(--secondary-white);
+}
+
+/* CLASSES TEXTS */
+
+.body-medium {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--neutral-dark);
+}
+
+.body-regular {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.headline-medium {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.headline-regular {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.caption-1 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.caption-2 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* CLASSES BUTTONS */
+
+.primaryButton {
+    background-color: var(--primary-default);
+    color: var(--secondary-white);
+    width: auto;
+    height: 52px;
+    padding: 15px 36px;
+    border: 0;
+}
+
+.tertiaryButton {
+    background-color: var(--neutral-light);
+    width: auto;
+    height: 52px;
+    padding: 15px 36px;
+    border: 0;
+}
+
+.secondaryButton {
+    background-color: var(--secondary-white);
+    color: var(--primary-default);
+    width: auto;
+    height: auto;
+    border: 0;
+}
