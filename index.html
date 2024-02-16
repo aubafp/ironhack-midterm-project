@@ -10,46 +10,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <img src="./Assets/Logos/circle.svg" alt="Company Logo" height="18.46px" width="60.53px">
+    <header id="home">
+        <a href="#home"><img src="./Assets/Logos/circle.svg" alt="Company Logo" height="18.46px" width="60.53px"></a>
         <nav class="headline-medium">
             <ul>
-                <li>Home</li>
-                <li>Projects</li>
-                <li>Services</li>
+                <li><a class="blueText" href="#home">Home</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#services-section">Services</a></li>
             </ul>
         </nav>
         <button class="primaryButton headline-medium">Contact Us</button>
     </header>
-    <section id="#hero-section">
-        <div>
-            <span id="titleHero">
-                <h1>Empower Your Business With Stunning Design!</h1>
-                <p class="body-regular">Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
+    <section id="hero-section">
+        <span id="titleHero">
+            <h1>Empower Your Business With Stunning Design!</h1>
+            <p class="body-regular">Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
+            <div>
                 <button class="primaryButton headline-medium">Get in touch</button>
                 <button class="tertiaryButton headline-medium">See our work</button>
-            </span>
-            <span id="imageHero">
-                <img src="./Assets/Hero/hero-image.png" alt="Similing man" height="637px" width="570px">
-                <div id="card1-hero">
-                    <img src="./Assets/Hero/Card 1.png" alt="Credit card" height="216px" width="190px">
-                </div>
-                <div id="card2-hero">
-                    <img src="./Assets/Hero/Card 2.png" alt="Emoji with project accepted" height="193px" width="190px">
-                </div>
-            </span>
-        </div>
+            </div>
+        </span>
+        <span id="imageHero">
+            <img src="./Assets/Hero/hero-image.png" alt="Similing man" height="637px" width="570px">
+            <div id="card1-hero">
+                <img src="./Assets/Hero/Card 1.png" alt="Credit card" height="216px" width="190px">
+            </div>
+            <div id="card2-hero">
+                <img src="./Assets/Hero/Card 2.png" alt="Emoji with project accepted" height="193px" width="190px">
+            </div>
+        </span>
     </section>
-    <section id="#client-section">
-        <div>
-            <img src="./Assets/Logos/airbnb-logo.svg" alt="Airbnb logo" height="32px" width="104px">
-            <img src="./Assets/Logos/google-logo.svg" alt="Google logo" height="32px" width="96px">
-            <img src="./Assets/Logos/microsoft-logo.svg" alt="Microsoft logo" height="26px" width="123px">
-            <img src="./Assets/Logos/fedex-logo.svg" alt="Fedex logo" height="30px" width="101px">
-            <img src="./Assets/Logos/amazon-logo.svg" alt="Amazon logo" height="32px" width="104px">
-        </div>
+    <section id="client-section">
+        <a href="https://www.airbnb.com" target="_blank"><img src="./Assets/Logos/airbnb-logo.svg" alt="Airbnb logo" height="32px" width="104px"></a>
+        <a href="https://www.google.com" target="_blank"><img src="./Assets/Logos/google-logo.svg" alt="Google logo" height="32px" width="96px"></a>
+        <a href="https://www.microsoft.com" target="_blank"><img src="./Assets/Logos/microsoft-logo.svg" alt="Microsoft logo" height="26px" width="123px"></a>
+        <a href="https://www.fedex.com" target="_blank"><img src="./Assets/Logos/fedex-logo.svg" alt="Fedex logo" height="30px" width="101px"></a>
+        <a href="https://www.amazon.com" target="_blank"><img src="./Assets/Logos/amazon-logo.svg" alt="Amazon logo" height="32px" width="104px"></a>
     </section>
-    <section id="#projects-section">
+    <section id="projects-section">
         <h3>Recent<br>Projects</h3>
         <div>
             <article>
@@ -99,7 +97,7 @@
             </div>
         </div>
     </section>
-    <section id="#services-section">
+    <section id="services-section">
         <h3>Our Services</h3>
         <div>
             <article>

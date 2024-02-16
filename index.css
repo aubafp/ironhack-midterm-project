@@ -1,0 +1,64 @@
+/* HEADER */
+
+/* see general.css -> code share btw different pages*/
+
+/* HERO SECTION */
+
+#hero-section {
+    margin-top: 100px;
+    height: 650px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 214px;
+    padding-left: 170px;
+    align-items: center;
+}
+
+#titleHero {
+    height: 422px;
+    width: 530px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#titleHero p {
+    max-width: 435px;
+}
+
+#imageHero {
+    max-height: 650px;
+    position: relative;
+}
+
+#card1-hero {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#card2-hero {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* CLIENTS SECTION */
+
+#client-section {
+    margin-top: 130px;
+    height: 96px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 170px;
+    padding-left: 170px;
+    align-items: center;
+}
+
+#client-section img {
+    filter: grayscale(100%);
+}
+
+/* PROJECTS SECTION */
+
+/* see general.css -> code share btw different pages*/
