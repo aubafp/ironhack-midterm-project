@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <img>
+        <img src="./Assets/Logos/circle.svg" alt="Company Logo" height="18.46px" width="60.53px">
         <nav class="headline-medium">
             <ul>
                 <li>Home</li>
@@ -23,43 +23,49 @@
     </header>
     <section id="#hero-section">
         <div>
-            <span>
+            <span id="titleHero">
                 <h1>Empower Your Business With Stunning Design!</h1>
                 <p class="body-regular">Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
                 <button class="primaryButton headline-medium">Get in touch</button>
                 <button class="tertiaryButton headline-medium">See our work</button>
             </span>
-            <img>
-            <img>
-            <img>
+            <span id="imageHero">
+                <img src="./Assets/Hero/hero-image.png" alt="Similing man" height="637px" width="570px">
+                <div id="card1-hero">
+                    <img src="./Assets/Hero/Card 1.png" alt="Credit card" height="216px" width="190px">
+                </div>
+                <div id="card2-hero">
+                    <img src="./Assets/Hero/Card 2.png" alt="Emoji with project accepted" height="193px" width="190px">
+                </div>
+            </span>
         </div>
     </section>
     <section id="#client-section">
         <div>
-            <img>
-            <img>
-            <img>
-            <img>
-            <img>
+            <img src="./Assets/Logos/airbnb-logo.svg" alt="Airbnb logo" height="32px" width="104px">
+            <img src="./Assets/Logos/google-logo.svg" alt="Google logo" height="32px" width="96px">
+            <img src="./Assets/Logos/microsoft-logo.svg" alt="Microsoft logo" height="26px" width="123px">
+            <img src="./Assets/Logos/fedex-logo.svg" alt="Fedex logo" height="30px" width="101px">
+            <img src="./Assets/Logos/amazon-logo.svg" alt="Amazon logo" height="32px" width="104px">
         </div>
     </section>
     <section id="#projects-section">
         <h3>Recent<br>Projects</h3>
         <div>
             <article>
-                <img>
+                <img src="./Assets/Projects/1.jpg" alt="Background image with colors" height="240px" width="340px">
                 <p class="body-medium">Simplify</p>
                 <p class="headline-regular">UI Design & App Development</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
             </article>
             <article>
-                <img>
+                <img src="./Assets/Projects/2.jpg" alt="Background image with colors" height="240px" width="340px">
                 <p class="body-medium">Dashcoin</p>
                 <p class="headline-regular">Web Development</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
             </article>
             <article>
-                <img>
+                <img src="./Assets/Projects/3.jpg" alt="Background image with colors" height="240px" width="340px">
                 <p class="body-medium">Vectorify</p>
                 <p class="headline-regular">User Experience Design</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
@@ -68,11 +74,23 @@
     </section>
     <section id="testimonials-section">
         <div id="testimonial-emojis">
+            <div id="emojiOne-testimonials">
+                <img src="./Assets/Testimonial/memoji-1.png" alt="Emoji of a girl with fingers crossed" height="150px" width="150px">
+            </div>
+            <div id="emojiTwo-testimonials">
+                <img src="./Assets/Testimonial/memoji-2.png" alt="Emoji of a boy with one eye closed" height="150px" width="150px">
+            </div>
+            <div id="emojiThree-testimonials">
+                <img src="./Assets/Testimonial/memoji-3.png" alt="Emoji of a boy with thumbs up" height="150px" width="150px">
+            </div>
+            <div id="emojiFour-testimonials">
+                <img src="./Assets/Testimonial/memoji-4.png" alt="Emoji of a girl with party accessories" height="150px" width="150px">
+            </div>
             <div id="testimonial-texts">
                 <h3>Hear What Our Clients Have to Say</h3>
                 <p class="body-medium">“Circle helped us through every stage of our startup. We really enjoyed working with you.”</p>
                 <div id="testimonial-person">
-                    <img>
+                    <img src="./Assets/Testimonial/profile.png" alt="Profile picture of the client testomonial" height="50px" width="50px">
                     <span>
                         <p class="headline-regular">Kristin Watson</p>
                         <p class="caption-2">Booking.com</p>
@@ -85,19 +103,25 @@
         <h3>Our Services</h3>
         <div>
             <article>
-                <img>
+                <div class="round">
+                    <img src="./Assets/Services/1.svg" alt="Icon of a pen" height="40px" width="40px">
+                </div>
                 <p class="body-medium">User Interface Design</p>
                 <p class="body-regular">Circle provides you with a stunning user interface design that is accessible to everyone.</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
             </article>
             <article>
-                <img>
+                <div class="round">
+                    <img src="./Assets/Services/2.svg" alt="Icon of a pc mouse" height="40px" width="40px">
+                </div>
                 <p class="body-medium">User Experience Design</p>
                 <p class="body-regular">Circle always focuses on delivering the best user experience to your customers.</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
             </article>
             <article>
-                <img>
+                <div class="round">
+                    <img src="./Assets/Services/3.svg" alt="Icon of a code window" height="40px" width="40px">
+                </div>
                 <p class="body-medium">Application Development</p>
                 <p class="body-regular">We develop high-quality mobile and web applications using the latest technology stack.</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
@@ -108,15 +132,24 @@
         <h3>Do you have any questions?</h3>
         <p class="body-regular">Let us help you!</p>
         <form>
-            <label for="email"><img>Enter your email</label>
+            <label for="email"><img src="./Assets/CTA/mail.svg" alt="Icon of a mailbox" height="30px" width="30px">Enter your email</label>
             <input type="email", id="email", name="email">
             <button class="primaryButton">Subscribe</button>
         </form>
     </section>
-    <!--VOY POR AQUI, ME FALTA EL FOOTER SOLO, VAMOS!-->
-    <footer>
-
+    <footer class="headline-regular">
+        <img img src="./Assets/Logos/circle.svg" alt="Company Logo" height="30px" width="98.38px">
+        <ul>
+            <li>Team</li>
+            <li>Services</li>
+            <li>About Us</li>
+        </ul>
+        <address>2972 Westheimer Rd. Santa Ana, Illinois 85486 </address>
+        <ul>
+            <li>Press</li>
+            <li>Projects</li>
+            <li>Privacy Policy</li>
+        </ul>
     </footer>
-    
 </body>
 </html>
