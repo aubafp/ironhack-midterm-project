@@ -87,13 +87,87 @@
 
 /* TESTIMONIAL SECTION */
 
+#testimonial-emojis {
+    height: 622px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 120px; /* en realidad son 200px pero me parece demasiado, dejo 120 */
+    background-color: var(--neutral-dark);
+    background-image: url("./Assets/Testimonial/orbit.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
 #testimonial-emojis img {
     height: 150px;
 }
 
-#testimonial-texts img {
-    height: 50px;
+#emojiOne-testimonials {
+    position: absolute;
+    top: 10%;
+    left: 5%;
 }
+
+#emojiTwo-testimonials {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+}
+
+#emojiThree-testimonials {
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+}
+
+#emojiFour-testimonials {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+}
+
+#testimonial-texts {
+    padding-top: 124px;
+    display: flex;
+    flex-direction: column;
+    gap: 108px;
+    align-items: center;
+}
+
+#testimonial-texts h3 {
+    color: var(--secondary-white)
+}
+
+#testimonial-texts .body-medium {
+    color: var(--secondary);
+    max-width: 596px;
+    text-align: center;
+}
+
+#testimonial-person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#testimonial-person img {
+    height: 50px;
+    border-radius: 150px;
+}
+
+#testimonial-person .headline-regular {
+    color: var(--primary-hover)
+}
+
+#testimonial-person .caption-2 {
+    padding-top: 5px;
+    color: var(--neutral-light)
+}
+
+
 
 /* SERVICES SECTION */
 
@@ -135,6 +209,32 @@
         grid-row-gap: 24px;
         justify-items: center;
     }
+
+    /* TESTIMONIALS */
+
+    #testimonial-emojis {
+        height: 422px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 40px;
+    }
+
+    #emojiOne-testimonials,
+    #emojiTwo-testimonials,
+    #emojiThree-testimonials,
+    #emojiFour-testimonials {
+        display: none;
+
+    }
+    
+    #testimonial-texts {
+        padding-top: 60px;
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+        gap: 70px;
+    }
+
 }
 
 /* TABLET RESPONSIVE */
@@ -168,6 +268,22 @@
         grid-template-columns: 33% 33% 33%;
         grid-row-gap: 24px;
         justify-items: center;
+    }
+
+    /* TESTIMONIALS */
+    #emojiOne-testimonials,
+    #emojiTwo-testimonials {
+        display: none;
+    }
+
+    #emojiThree-testimonials {
+        bottom: 5%;
+        left: 4%;
+    }
+    
+    #emojiFour-testimonials {
+        bottom: 5%;
+        right: 4%;
     }
 
 }
