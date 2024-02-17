@@ -11,6 +11,7 @@
     --neutral-light-blue: #ECF7FF;
     --secondary: #FFC600;
     --secondary-white: #FFFFFF;
+    --shadow-gray: rgba(0,0,0,0.25)
   }
 
 /* GENERAL HTML DOC */
@@ -177,6 +178,7 @@ nav ul {
     margin-top: 100px; /* en realidad son 200px pero me parece demasiado, dejo 100 */
     height: 561px;
     padding-left: 170px;
+    padding-right: 170px;
     width: 100%;
     box-sizing: border-box;
 }
@@ -184,16 +186,17 @@ nav ul {
 #projects-section div {
     display: flex;
     justify-content: space-between;
-    padding-right: 170px;
-    padding-top: 23px;
+    padding-top: 24px;
 }
 
 #projects-section article {
     height: 444px;
+    box-shadow: 0px 4px 40px var(--shadow-gray);
 }
 
 #projects-section img {
     height: 240px;
+    width: 340px;
 }
 
 #projects-section p {
@@ -286,6 +289,33 @@ footer img {
     header button {
         display: none;
     }
+
+    /* PROJECTS */
+
+    #projects-section {
+        margin-top: 0px;
+        width: 100%;
+        padding: 20px;
+        height: 100%;
+    }
+
+    #projects-section div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        padding-top: 24px;
+    }
+
+    #projects-section img {
+        height: 100%;
+        max-height: 240px;
+        width: 310px; /* Me veo obligada a forzar píxeles porque una de las imgs tiene distintas dimansiones y sino se me queda diferente al resto */
+    }
+
+    #projects-section h3 {
+        padding-left: 20px;
+    }
 }
 
 /* TABLET RESPONSIVE */
@@ -303,4 +333,32 @@ footer img {
     header nav {
         display: none;
     }
+
+    /* PROJECTS */
+
+    #projects-section {
+        margin-top: 0px;
+        width: 100%;
+        padding: 20px;
+        height: 100%;
+    }
+
+    #projects-section div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 24px;
+        justify-items: center;
+
+    }
+
+    #projects-section img {
+        height: 100%;
+        max-height: 240px;
+        width: 310px; /* Me veo obligada a forzar píxeles porque una de las imgs tiene distintas dimansiones y sino se me queda diferente al resto */
+    }
+
+    #projects-section h3 {
+        padding-left: 60px;
+    }
+
 }

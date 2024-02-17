@@ -123,6 +123,18 @@
         justify-content: space-around;
         height: 320px;
     }
+
+    /* CLIENTS */
+
+    #client-section {
+        margin-top: 0px;
+        padding: 20px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 24px;
+        justify-items: center;
+    }
 }
 
 /* TABLET RESPONSIVE */
@@ -145,4 +157,17 @@
         justify-content: space-around;
         height: 320px;
     }
+
+    /* CLIENTS */
+
+    #client-section {
+        margin-top: 0px;
+        padding: 40px;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-row-gap: 24px;
+        justify-items: center;
+    }
+
 }
