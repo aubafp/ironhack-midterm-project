@@ -140,11 +140,12 @@ header {
     left: 0;
     right: 0;
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     box-sizing: border-box;
     height: 122px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 20px; /*Aunque no esté en el diseño le añado el padding para cuando se haga scroll no quede el boton arras del contenedor del header*/
     padding-left: 170px;
     padding-right: 170px;
     display: flex;
@@ -152,6 +153,10 @@ header {
     align-items:last baseline;
     background-color: var(--neutral-light);
     z-index: 10; /* posicionarlo por encima en el eje z*/
+}
+
+header img {
+    height: 20px;
 }
 
 nav ul {
@@ -166,7 +171,7 @@ nav ul {
     color: var(--primary-default)
 }
 
-/* PROJECTS SECTION - for index.html and contact.html */
+/* PROJECTS SECTION - for index.html and project.html */
 
 #projects-section {
     margin-top: 100px; /* en realidad son 200px pero me parece demasiado, dejo 100 */
@@ -187,6 +192,10 @@ nav ul {
     height: 444px;
 }
 
+#projects-section img {
+    height: 240px;
+}
+
 #projects-section p {
     padding-left: 30px;
     padding-top: 30px;
@@ -201,17 +210,97 @@ nav ul {
     padding-top: 54px;
 }
 
-/* RESPONSIVE MOBILE */
-@media (max-width: 468px) {
+/* CTA SECTION - for index.html and project.html */
+
+#cta-section img {
+    height: 30px;
+}
+
+/* FOOTER- for all html pages */
+footer img {
+    height: 30px;
+}
+
+/* MOBILE/TABLET RESPONSIVE* /
+
+/* DS: headers and texts font sizes*/
+
+@media (max-width: 1025px) {
+    h1 {
+        font-size: 34px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+
+    .body-medium {
+        font-size: 20px;
+    }
+    
+    .body-regular {
+        font-size: 16px;
+    }
+    
+    .headline-medium {
+        font-size: 14px;
+    }
+    
+    .headline-regular {
+        font-size: 14px;
+    }
+    
+    .caption-1 {
+        font-size: 13px;
+    }
+    
+    .caption-2 {
+        font-size: 12px;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 620px) {
+
+    /* HEADER */
+
     header {
         height: 60px;
         padding: 0;
-        justify-content: center;
+        justify-content:flex-start;
         align-items: center;
+        padding-top: 20px;
+        padding-left: 20px;
     }
 
     header nav,
     header button {
+        display: none;
+    }
+}
+
+/* TABLET RESPONSIVE */
+
+@media (min-width: 620px) and (max-width: 1025px) {
+
+    /* HEADER */
+
+    header {
+        padding: 0;
+        justify-content:space-around;
+        align-items: center;
+    }
+
+    header nav {
         display: none;
     }
 }

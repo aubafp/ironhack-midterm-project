@@ -1,11 +1,11 @@
 /* HEADER */
 
-/* see general.css -> code share btw different pages*/
+/* see general.css -> code shared btw different pages*/
 
 /* HERO SECTION */
 
 #hero-section {
-    margin-top: 222px;
+    margin-top: 202px; /* En vez de 222 he puesto 202 ya que en el header he añadido 20px de padding bottom */
     height: 650px;
     display: flex;
     justify-content: space-between;
@@ -67,7 +67,7 @@
 /* CLIENTS SECTION */
 
 #client-section {
-    margin-top: 130px;
+    margin-top: 40px;
     height: 96px;
     display: flex;
     justify-content: space-between;
@@ -78,15 +78,36 @@
 
 #client-section img {
     filter: grayscale(100%);
+    height: 32px;
 }
 
 /* PROJECTS SECTION */
 
-/* see general.css -> code share btw different pages*/
+/* see general.css -> code shared btw different pages*/
+
+/* TESTIMONIAL SECTION */
+
+#testimonial-emojis img {
+    height: 150px;
+}
+
+#testimonial-texts img {
+    height: 50px;
+}
+
+/* SERVICES SECTION */
+
+#services-section img {
+    height: 40px;
+}
 
 
-/* RESPONSIVE MOBILE */
-@media (max-width: 468px) {
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 620px) {
+
+    /* HERO */
+
     #hero-section {
         margin-top: 60px;
         padding: 20px;
@@ -95,10 +116,33 @@
     }
 
     #imageHero {
-        height: 357px;
+        height: 360px;
     }
 
-    #titleHero h1 {
-        font-size: 40px;
+    #titleHero {
+        justify-content: space-around;
+        height: 320px;
+    }
+}
+
+/* TABLET RESPONSIVE */
+
+@media (min-width: 620px) and (max-width: 1025px) {
+
+    /* HERO */
+
+    #hero-section {
+        margin-top: 100px;
+        padding: 40px;
+        height: 100%;
+    }
+
+    #imageHero {
+        height: 360px;
+    }
+
+    #titleHero {
+        justify-content: space-around;
+        height: 320px;
     }
 }
