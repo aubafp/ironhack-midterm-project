@@ -1,0 +1,507 @@
+/* VARIABLES - COLORS */
+
+:root {
+    --primary-default: #072AC8;
+    --accent: #43D2FF;
+    --primary-hover: #A2D6F9;
+    --primary-tapped: #D1EDFF;
+    --neutral-dark: #292E47;
+    --neutral-medium: #6B708D;
+    --neutral-light: #F2F4FC;
+    --neutral-light-blue: #ECF7FF;
+    --secondary: #FFC600;
+    --secondary-white: #FFFFFF;
+    --shadow-gray: rgba(0,0,0,0.25)
+  }
+
+/* GENERAL HTML DOC */
+
+html, h1, h2, h3, h4, h5, h6, p, div, section, header, nav, ul {
+    padding: 0;
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--neutral-dark)
+}
+
+p, li {
+    color: var(--neutral-medium)
+}
+
+body {
+    padding: 0;
+    margin: 0 auto;
+    font-family: Roboto;
+    background-color: var(--neutral-light);
+    max-width: 1440px;
+    width: 100%;
+}
+
+/* MAIN ELEMENTS */
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 24x;
+    font-weight: 700;
+}
+
+ul {
+    list-style: none
+}
+
+article {
+    background-color: var(--secondary-white);
+}
+
+a {
+    color: var(--neutral-medium);
+    text-decoration: none;
+}
+
+/* CLASSES TEXTS */
+
+.body-medium {
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--neutral-dark);
+}
+
+.body-regular {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.headline-medium {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.headline-regular {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.caption-1 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.caption-2 {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+/* CLASSES BUTTONS */
+
+.primaryButton {
+    background-color: var(--primary-default);
+    color: var(--secondary-white);
+    width: auto;
+    height: 52px;
+    padding: 15px 36px;
+    border: 0;
+}
+
+.tertiaryButton {
+    background-color: var(--neutral-light);
+    width: auto;
+    height: 52px;
+    padding: 15px 36px;
+    border: 0;
+}
+
+.secondaryButton {
+    background-color: var(--secondary-white);
+    color: var(--primary-default);
+    width: auto;
+    height: auto;
+    border: 0;
+}
+
+/* HEADER- for all html pages */
+
+header {
+    position: fixed; /*Esta propiedad saca el elemento del body - lo pone por encima*/
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    height: 122px;
+    padding-top: 0px;
+    padding-bottom: 20px; /*Aunque no esté en el diseño le añado el padding para cuando se haga scroll no quede el boton arras del contenedor del header*/
+    padding-left: 170px;
+    padding-right: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items:last baseline;
+    background-color: var(--neutral-light);
+    z-index: 10; /* posicionarlo por encima en el eje z*/
+}
+
+header img {
+    height: 20px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0px;
+    width: 295px;
+}
+
+.blueText {
+    color: var(--primary-default)
+}
+
+/* PROJECTS SECTION - for index.html and project.html */
+
+#projects-section {
+    margin-top: 100px; /* en realidad son 200px pero me parece demasiado, dejo 100 */
+    height: 561px;
+    padding-left: 170px;
+    padding-right: 170px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#projects-section div {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+}
+
+#projects-section article {
+    height: 444px;
+    box-shadow: 0px 4px 40px var(--shadow-gray);
+}
+
+#projects-section img {
+    height: 240px;
+    width: 340px;
+}
+
+#projects-section p {
+    padding-left: 30px;
+    padding-top: 30px;
+}
+
+#projects-section p.headline-regular {
+    padding-top: 10px;
+}
+
+#projects-section .secondaryButton {
+    padding-left: 30px;
+    padding-top: 54px;
+}
+
+/* CTA SECTION - for index.html and project.html */
+
+#cta-section {
+    height: 500px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 100px;
+    background-color: var(--secondary);
+    padding-top: 136px;
+    padding-bottom: 136px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#cta-section h3 {
+    padding-bottom: 20px;
+}
+
+#cta-section .body-regular {
+    padding-bottom: 50px;
+    color: var(--neutral-dark)
+}
+
+#cta-form-div {
+    position: relative;
+}
+
+#cta-section label {
+    position: absolute;
+    top: 40%;
+    left: 60px;
+}
+
+#cta-section img {
+    position: absolute;
+    top: 35%;
+    left: 20px;
+    height: 30px;
+}
+
+#cta-section input {
+    width: 393px;
+    height: 80px;
+    border: 0;
+    background-color: var(--secondary-white);
+}
+
+#cta-section button {
+    width: 198px;
+    height: 80px;
+    margin-left: 20px;
+}
+
+
+/* FOOTER - for all html pages */
+
+footer {
+    height: 192px;
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-bottom: 50px;
+    margin-top: 100px; /* Pongo menos aunque el figma ponga 170 */
+    
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer img {
+    height: 30px;
+}
+
+footer address {
+    max-width: 240px;
+    width: 100%;
+    font-style: normal;
+    line-height: 150%;
+}
+
+footer ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 106px;
+    max-width: 435px;
+    width: 100%;
+    max-height: 56px;
+}
+
+/* MOBILE/TABLET RESPONSIVE */
+
+
+@media (max-width: 1025px) {
+
+    /* DS: headers and texts font sizes*/
+
+    h1 {
+        font-size: 34px;
+    }
+    
+    h2 {
+        font-size: 28px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+
+    .body-medium {
+        font-size: 20px;
+    }
+    
+    .body-regular {
+        font-size: 16px;
+    }
+    
+    .headline-medium {
+        font-size: 14px;
+    }
+    
+    .headline-regular {
+        font-size: 14px;
+    }
+    
+    .caption-1 {
+        font-size: 13px;
+    }
+    
+    .caption-2 {
+        font-size: 12px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        height: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        margin-top: 50px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer ul {
+        display: none;
+    }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 620px) {
+
+    /* HEADER */
+
+    header {
+        height: 60px;
+        padding: 0;
+        justify-content:flex-start;
+        align-items: center;
+        padding-top: 20px;
+        padding-left: 20px;
+    }
+
+    header nav,
+    header button {
+        display: none;
+    }
+
+    /* PROJECTS */
+
+    #projects-section {
+        margin-top: 0px;
+        width: 100%;
+        padding: 20px;
+        height: 100%;
+    }
+
+    #projects-section div {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 30px;
+        padding-top: 24px;
+    }
+
+    #projects-section img {
+        height: 100%;
+        max-height: 240px;
+        width: 310px; /* Me veo obligada a forzar píxeles porque una de las imgs tiene distintas dimansiones y sino se me queda diferente al resto */
+    }
+
+    #projects-section h3 {
+        padding-left: 20px;
+    }
+
+    /* CTA */
+
+    #cta-section {
+        height: 400px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 40px;
+        padding-top: 78px;
+        text-align: center;
+    }
+
+    #cta-section input {
+        max-width: 240px;
+        width: 100%;
+        height: 50px;
+        border: 0;
+        background-color: var(--secondary-white);
+    }
+
+    #cta-section button {
+        max-width: 148px;
+        width: 100%;
+        height: 40px;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 10px 30px;
+    }
+
+    #cta-section label {
+        position: absolute;
+        top: 15%;
+        left: 65px;
+    }
+    
+    #cta-section img {
+        position: absolute;
+        top: 12%;
+        left: 30px;
+        height: 30px;
+    }
+    
+}
+
+/* TABLET RESPONSIVE */
+
+@media (min-width: 620px) and (max-width: 1025px) {
+
+    /* HEADER */
+
+    header {
+        padding: 0;
+        justify-content:space-around;
+        align-items: center;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    /* PROJECTS */
+
+    #projects-section {
+        margin-top: 0px;
+        width: 100%;
+        padding: 20px;
+        height: 100%;
+    }
+
+    #projects-section div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 24px;
+        justify-items: center;
+
+    }
+
+    #projects-section img {
+        height: 100%;
+        max-height: 240px;
+        width: 310px; /* Me veo obligada a forzar píxeles porque una de las imgs tiene distintas dimansiones y sino se me queda diferente al resto */
+    }
+
+    #projects-section h3 {
+        padding-left: 60px;
+    }
+
+}
