@@ -25,6 +25,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
+    box-shadow: 0px 15px 50px var(--shadow-purple);
 }
 
 /* PROJECT SECTION ADJUSTMENTS */
@@ -58,7 +59,7 @@
 
 /* TABLET RESPONSIVE */
 
-@media (max-width: 1025px) {
+@media (min-width: 621px) and (max-width: 1025px) {
 
     /* DETAIL */
 
