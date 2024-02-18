@@ -16,7 +16,7 @@
 
 /* GENERAL HTML DOC */
 
-html, h1, h2, h3, h4, h5, h6, p, div, section, header, nav {
+html, h1, h2, h3, h4, h5, h6, p, div, section, header, nav, ul {
     padding: 0;
     margin: 0;
 }
@@ -270,15 +270,47 @@ nav ul {
 
 
 /* FOOTER- for all html pages */
+
+footer {
+    height: 192px;
+    padding-left: 170px;
+    padding-right: 170px;
+    padding-bottom: 50px;
+    margin-top: 100px; /* Pongo menos aunque el figma ponga 170 */
+    
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-between;
+    align-items: center;
+}
+
 footer img {
     height: 30px;
 }
 
-/* MOBILE/TABLET RESPONSIVE* /
+footer address {
+    max-width: 240px;
+    width: 100%;
+    font-style: normal;
+    line-height: 150%;
+}
 
-/* DS: headers and texts font sizes*/
+footer ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 106px;
+    max-width: 435px;
+    width: 100%;
+    max-height: 56px;
+}
+
+/* MOBILE/TABLET RESPONSIVE */
+
 
 @media (max-width: 1025px) {
+
+    /* DS: headers and texts font sizes*/
+
     h1 {
         font-size: 34px;
     }
@@ -317,6 +349,25 @@ footer img {
     
     .caption-2 {
         font-size: 12px;
+    }
+
+    /* FOOTER */
+
+    footer {
+        height: 100px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 50px;
+        margin-top: 50px;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    footer ul {
+        display: none;
     }
 }
 
@@ -408,8 +459,6 @@ footer img {
         height: 30px;
     }
     
-
-
 }
 
 /* TABLET RESPONSIVE */
