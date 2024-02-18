@@ -1,0 +1,37 @@
+/* DETAIL SECTION */
+
+#detail-section {
+    height: 1100px;
+    margin-top: 200px;
+    padding-left: 170px;
+    padding-right: 170px;
+}
+
+#subtitle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+#image {
+    max-width: 1100px;
+    width: 100%;
+    max-height: 444px;
+    height: 100%;
+    background-image: url("/ironhack-midterm-project/Assets/Projects/1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    margin-bottom: 70px;
+}
+
+/* PROJECT SECTION ADJUSTMENTS */
+
+#projects-section {
+    margin-top: 80px; /* Me invento la medida, me guusta mas */
+}
+
+#projects-section div {
+    padding-top: 70px;
+}
