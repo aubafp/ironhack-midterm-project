@@ -17,6 +17,9 @@
   }
 
 /* GENERAL HTML DOC */
+html {
+    scroll-behavior: smooth
+}
 
 html, h1, h2, h3, h4, h5, h6, p, div, section, header, nav, ul {
     padding: 0;

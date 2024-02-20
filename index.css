@@ -193,12 +193,20 @@
     padding-right: 20px;
 }
 
+#services-section .round {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--neutral-light-blue);
+}
+
 #services-section img {
     height: 40px;
     width: 40px;
-    background-color: var(--neutral-light-blue);
-    border-radius: 30px; /* If I put a higher value the icon is cut WTF?! */
-    padding: 24px;
 }
 
 #services-section .secondaryButton {

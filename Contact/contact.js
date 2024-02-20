@@ -1,6 +1,6 @@
 // Get button
 
-const sendBtn = document.querySelector(".primaryButton")
+const sendBtn = document.querySelector("#submit-btn")
 
 // Get form fields
 
@@ -12,6 +12,9 @@ const messageInput = document.querySelector("#message")
 // Functions for form validation
 
 function validateName(input) {
+    if (!input) {
+        return "The name is compulsory"
+    }
     // compulsory to have a value
     // not ironhack
     // no numbers?
