@@ -14,6 +14,7 @@
     --shadow-gray: rgba(0,0,0,0.25);
     --shadow-purple: rgba(157,0,239,0.25);
     --background-inputs: rgba(107,112,141,0.1);
+    --background-inputs-error: #FFA896;
   }
 
 /* GENERAL HTML DOC */

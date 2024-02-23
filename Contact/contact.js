@@ -1,13 +1,35 @@
+// Definition success message of Form
+const successMessage = "Information submitted successfully. We will contact you by mail."
+
+
 // Get button
 
 const sendBtn = document.querySelector("#submit-btn")
 
-// Get form fields
+// Functions to Get form inputs and input values
 
-const nameInput = document.querySelector("#name")
-const emailInput = document.querySelector("#email")
-const phoneInput = document.querySelector("#phone")
-const messageInput = document.querySelector("#message")
+function getInputElems() {
+    // takes html input elements
+    const nameInput = document.querySelector("#name");
+    const emailInput = document.querySelector("#email");
+    const phoneInput = document.querySelector("#phone");
+    const messageInput = document.querySelector("#message");
+
+    return [nameInput, emailInput, phoneInput, messageInput]
+    // returns a list with the inputs elements
+}
+
+function getInputValues() {
+    // takes values of html input form fields
+    const nameInput = document.querySelector("#name").value;
+    const emailInput = document.querySelector("#email").value;
+    const phoneInput = document.querySelector("#phone").value;
+    const messageInput = document.querySelector("#message").value;
+
+    return [nameInput, emailInput, phoneInput, messageInput]
+    // returns a list with the inputs values
+}
+
 
 // Functions for form validation
 
@@ -22,13 +44,13 @@ function hasNumbers(input) {
 
 // Function to validate the name
 function validateName(input) {
-    if (!input) {
+    if (!input) { // No name introduced
         return "The name is compulsory"
     }
-    else if (input.toLowerCase() === "ironhack") {
+    else if (input.toLowerCase() === "ironhack") { // name is ironhack
         return "You cannot be Ironhack, because I am Ironhack"
     }
-    else if (hasNumbers(input) === true) {
+    else if (hasNumbers(input) === true) { // name contains numbers
         return "A name cannot contain numbers"
     }
     else {
@@ -38,6 +60,7 @@ function validateName(input) {
     // should return the alert message if something is not OK
 }
 
+// Function to validate the email
 function validateMail(input) {
     // has "@"
     // has ".com/es/something"
@@ -47,6 +70,7 @@ function validateMail(input) {
     // should return the alert message if something is not OK
 }
 
+// Function to validate the phone
 function validatePhone(input) {
     // only numbers
     // 9 numbers
@@ -56,6 +80,7 @@ function validatePhone(input) {
     // should return the alert message if something is not OK
 }
 
+// Function to validate the message
 function validateMessage(input) {
    // min characters
    // max characters 
@@ -64,33 +89,91 @@ function validateMessage(input) {
     // should return the alert message if something is not OK
 }
 
-function validateForm() {
-    // think about adding some kind of logic to avoid checking all functions if first field is already wrong (if - else?)
-    validateName(nameInput)
-    validateMail(emailInput)
-    validatePhone(phoneInput)
-    validateMessage(messageInput)
+// Function to validate the whole form, calls the previus defined functions for individual input validation
+function validateForm(nameInput, emailInput, phoneInput, messageInput) {
 
-    // should return true if all is OK
-    // should return the alert message if something is not OK
+    const [nameInputElem, emailInputElem, phoneInputElem, messageInputElem] = getInputElems();
+
+    if (validateName(nameInput) != true && validateName(nameInput) != undefined) {
+        return [validateName(nameInput),nameInputElem]
+    }
+    else if (validateMail(emailInput) != true && validateMail(emailInput) != undefined) {
+        return [validateMail(emailInput),emailInputElem]
+    }
+    else if (validatePhone(phoneInput) != true && validatePhone(phoneInput) != undefined) {
+        return [validatePhone(phoneInput),phoneInputElem]
+    }
+    else if (validateMessage(messageInput) != true && validateMessage(messageInput) != undefined) {
+        return [validateMessage(messageInput),messageInputElem]
+    }
+    else {
+        return [successMessage,null]
+    }
+    // returns a list
+    // the fist position corresponds to the message:
+        // should return success message if all is OK 
+        // should return the alert message if something is not OK. Checking inputs in order, will return error message of the first wrong input
+    // the second position corresponds to the element that generate the error in form validation (if all is ok, it is null)
 }
 
+// Function to change background color of html element to red
+function changeBackgroundToRed(elem) {
+    elem.classList.add("redBackground")
+}
+
+// Function to show alerts
 function showAlert(message) {
     // show alert receiving the alert message by parameter
+    alert(message[0]); // displays alert with the success / error message
+
+    // if the second position is null (mo errored input), nothing else happens
+    if (message[1] === null) {
+        // do nothing - no existe el "pass" en JS
+    }
+    // else (some errored input): the errored input changes background color to red by applying a class
+    else {
+        changeBackgroundToRed(message[1])
+    }   
 }
 
-function sendInformation() {
-    if (validateForm() == true) {
-        // send information
-    }
+// Function to change all inputs to original background color
+function backToInitialState() {
+    const inputElems = getInputElems();
+    inputElems.forEach((elem) => {
+        if(elem.classList.contains("redBackground")) {
+            elem.classList.remove("redBackground")
+        }
+    })
+    
+}
 
-    else {
-        showAlert(validateForm())
+// Function to remove all input values. To be used on form success
+function removeInputValues() {
+    const inputElems = getInputElems()
+    inputElems.forEach((elem) => {    
+        elem.value = "";
+    })
+}
+
+// Function to be called onclick generation and concatenate operations for input/output of the form by calling other functions
+function contactFormInputOutput() {
+    // call a function to change all inputs to original background color
+    backToInitialState()
+
+    // call getInputValues function to retrieve the values of the inputs
+    const [nameInput, emailInput, phoneInput, messageInput] = getInputValues();
+
+    // call the showalert function with the outcome of validationForm function
+    showAlert(validateForm(nameInput, emailInput, phoneInput, messageInput))
+
+    // on form success, call a function to remove the input elements values
+    if (validateForm(nameInput, emailInput, phoneInput, messageInput)[0] === successMessage) {
+        removeInputValues()
     }
 }
 
 // Add event into send button to send information
 
 sendBtn.addEventListener('click',() => {
-    sendInformation()
+    contactFormInputOutput()
 })

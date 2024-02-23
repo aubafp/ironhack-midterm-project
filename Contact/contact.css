@@ -72,6 +72,10 @@
 
 }
 
+.redBackground {
+    background-color: var(--background-inputs-error) !important;
+}
+
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 620px) {
