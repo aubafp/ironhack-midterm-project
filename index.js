@@ -20,6 +20,7 @@ function generateProjectURL(id) {
     const origin = window.location.origin
     return `${origin}/ironhack-midterm-project/Project/project.html?id=${id}`
 }
+
 // Function to get button from inside an article passed as parameter
 function getBtnOfArticle(article) {
     return article.querySelector("button")
@@ -32,7 +33,7 @@ function addEventBtnProject(btn, url) {
     })
 }
 
-// For each article: get the id, generate the URL, add event listener
+// For each article: get the id, generate the URL, get the button, and add event listener to the button to redirect to specific project detail
 getArticlesIds.forEach((article) => {
     let id = article.getAttribute("data-project-id")
     let url = generateProjectURL(id)

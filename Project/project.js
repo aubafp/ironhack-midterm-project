@@ -11,9 +11,12 @@ async function getServerProjectsInfo(url) {
     }
 }
 
+function getIdFromUrl() {
+    
+}
+
 // Function to call in the event listener that will call to all necessary operations to display the correct dynamic project detail page content
 async function loadPageContent() {
-    // console.log("reeesult---",getServerProjectsInfo(apiUrl))
     const projectsInfo = await getServerProjectsInfo(apiUrl)
     // function to get Id from URL -> usar https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams 
     // function to convert the server response into nice data filtering by current project (Id of URL) - return an object with the current project data

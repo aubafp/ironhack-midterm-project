@@ -181,7 +181,7 @@ nav ul {
 /* PROJECTS SECTION - for index.html and project.html */
 
 #projects-section {
-    margin-top: 100px; /* en realidad son 200px pero me parece demasiado, dejo 100 */
+    padding-top: 140px; /* en realidad son 200px pero me parece demasiado, dejo 140 */
     height: 561px;
     padding-left: 170px;
     padding-right: 170px;
@@ -225,7 +225,7 @@ nav ul {
     height: 500px;
     margin-left: 60px;
     margin-right: 60px;
-    margin-top: 100px;
+    margin-top: 200px; /* en realidad son 136 pero pongo mas para compensar el padding top de la anterior seccion */
     background-color: var(--secondary);
     padding-top: 136px;
     padding-bottom: 136px;
@@ -401,7 +401,7 @@ footer ul {
     /* PROJECTS */
 
     #projects-section {
-        margin-top: 0px;
+        padding-top: 40px;
         width: 100%;
         padding: 20px;
         height: 100%;
@@ -431,7 +431,7 @@ footer ul {
         height: 400px;
         margin-left: 20px;
         margin-right: 20px;
-        margin-top: 40px;
+        margin-top: 80px;
         padding-top: 78px;
         text-align: center;
     }
@@ -487,9 +487,10 @@ footer ul {
     /* PROJECTS */
 
     #projects-section {
-        margin-top: 0px;
         width: 100%;
         padding: 20px;
+        padding-top: 60px;
+        max-height: 850px;
         height: 100%;
     }
 
@@ -509,6 +510,12 @@ footer ul {
 
     #projects-section h3 {
         padding-left: 60px;
+    }
+
+    /* CTA */
+
+    #cta-section {
+        margin-top: 80px;
     }
 
 }
