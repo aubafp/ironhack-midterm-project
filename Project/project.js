@@ -38,22 +38,59 @@ function getOtherProjectsData(allProjects, id) {
     // returns an array of objects with the others projects data
 }
 
+// Function for DOM modification of HTML to add the project content
+function modifyProjectDetailHtml(projectObj) {
+    // get DOM elements
+    const domTitle = document.querySelector("h1")
+    const domSubtitleDescription = document.querySelector("#subtitleDescription")
+    const domDateCompletion = document.querySelector("#dateCompletion")
+    const domImage = document.querySelector("#image")
+    const domGeneralDescription = document.querySelector("#generalDescription")
+
+    // destructure object information into variables
+    const {completed_on, content, description, image, name, uuid} = projectObj;
+
+    // modify DOM elements content
+    domTitle.innerHTML = name
+    domSubtitleDescription.innerHTML = description
+    domDateCompletion.innerHTML = `<b>Completed on</b> ${completed_on}`
+    domImage.style.backgroundImage = `url(${image})` // CAMBIAR CON REFACTOR
+    domGeneralDescription.innerHTML = `<p>${content}</p>`
+}
+
+// Function for DOM modification of HTML to add the Other projects section content
+function modifyOtherProjectsHtml(projectsArray) {
+    // get DOM elements
+    const articles = [...document.querySelectorAll("article")]
+
+    const image = document.querySelector("img")
+    const titleArticle = document.querySelector("#titleArticle")
+    const descriptionArticle = document.querySelector("#descriptionArticle")
+    const sendButton = document.querySelector("button")
+
+    // Separated function to add event listener in the Learn More button (reuse the one from index.js - or move it to general.js better)
+}
+
 
 // Function to call in the event listener that will call to all necessary operations to display the correct dynamic project detail page content
 async function loadPageContent() {
+    // get projects info from API
     const allProjectsInfo = await getServerProjectsInfo(apiUrl)
+
+    // get id from URL
     const id = getIdFromUrl()
+
+    // get current project data as an object
     const currentProject = getCurrentProjectData(allProjectsInfo, id)
+
+    // get other projects data as an array of objects
     const otherProjects = getOtherProjectsData(allProjectsInfo, id)
 
-    console.log(currentProject)
-    console.log(otherProjects)
+    // modify project detail html with current project data
+    modifyProjectDetailHtml(currentProject)
 
-
-    // function for DOM modification of HTML to add the project content
-
-
-    // function for DOM modification of HTML to add the Other projects content (should never be the same of the project where I am, so take the other 3 available projects)
+    // modify other projects html with the rest of projects data
+    modifyOtherProjectsHtml(otherProjects)
 }
 
 

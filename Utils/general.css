@@ -202,7 +202,8 @@ nav ul {
 
 #projects-section img {
     height: 240px;
-    width: 340px;
+    max-width: 340px;
+    width: 100%;
 }
 
 #projects-section p {
@@ -401,9 +402,9 @@ footer ul {
     /* PROJECTS */
 
     #projects-section {
-        padding-top: 40px;
         width: 100%;
         padding: 20px;
+        padding-top: 60px;
         height: 100%;
     }
 

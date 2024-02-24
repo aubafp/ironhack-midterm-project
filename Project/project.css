@@ -13,7 +13,11 @@
 #subtitle {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+}
+
+.grayColor {
+    color: var(--neutral-medium);
 }
 
 #image {
@@ -30,13 +34,18 @@
 
 /* PROJECT SECTION ADJUSTMENTS */
 
-#projects-section {
-    margin-top: 80px; /* Me invento la medida, me guusta mas */
-}
-
 #projects-section div {
     padding-top: 70px;
 }
+
+/* CTA SECTION ADJUSTMENTS in desktop */
+
+@media (min-width: 1026px) {
+    #cta-section {
+        margin-top: 300px;
+    }
+}
+
 
 /* MOBILE RESPONSIVE */
 
@@ -45,7 +54,6 @@
     /* DETAIL */
 
     #detail-section {
-        height: 1150px;
         padding-left: 30px;
         padding-right: 30px;
         margin-top: 100px;
@@ -67,6 +75,11 @@
         padding-left: 70px;
         padding-right: 70px;
         margin-top: 150px;
+    }
+
+    /* PROJECT SECTIONS ADJUSTMENTS */
+    #projects-section {
+        max-height: 1150px;
     }
     
 }
