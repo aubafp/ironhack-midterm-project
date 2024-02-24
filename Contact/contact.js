@@ -62,6 +62,8 @@ function validateName(input) {
 
 // Function to validate the email
 function validateMail(input) {
+    // make it compulsory for consistency
+    // Usar regEx!!
     // has "@"
     // has ".com/es/something"
     // has structure "something@something.something"
@@ -125,15 +127,6 @@ function changeBackgroundToRed(elem) {
 function showAlert(message) {
     // show alert receiving the alert message by parameter
     alert(message[0]); // displays alert with the success / error message
-
-    // if the second position is null (mo errored input), nothing else happens
-    if (message[1] === null) {
-        // do nothing - no existe el "pass" en JS
-    }
-    // else (some errored input): the errored input changes background color to red by applying a class
-    else {
-        changeBackgroundToRed(message[1])
-    }   
 }
 
 // Function to change all inputs to original background color
@@ -144,7 +137,6 @@ function backToInitialState() {
             elem.classList.remove("redBackground")
         }
     })
-    
 }
 
 // Function to remove all input values. To be used on form success
@@ -163,13 +155,18 @@ function contactFormInputOutput() {
     // call getInputValues function to retrieve the values of the inputs
     const [nameInput, emailInput, phoneInput, messageInput] = getInputValues();
 
-    // call the showalert function with the outcome of validationForm function
-    showAlert(validateForm(nameInput, emailInput, phoneInput, messageInput))
+    const isValid = validateForm(nameInput, emailInput, phoneInput, messageInput)
 
     // on form success, call a function to remove the input elements values
-    if (validateForm(nameInput, emailInput, phoneInput, messageInput)[0] === successMessage) {
+    if (isValid[0] === successMessage) {
         removeInputValues()
+    } else { // else (some errored input): the errored input changes background color to red by applying a class
+        changeBackgroundToRed(isValid[1])
     }
+
+    // call the showalert function with the outcome of validationForm function
+    showAlert(isValid)
+
 }
 
 // Add event into send button to send information

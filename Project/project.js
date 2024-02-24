@@ -6,9 +6,8 @@ async function getServerProjectsInfo(url) {
     try {
         const response = await fetch(url)
         return response.json()
-    }
-    catch (err) {
-    console.log(err);
+    } catch (err) {
+        console.log(err.message);
     }
 }
 
@@ -16,7 +15,7 @@ async function getServerProjectsInfo(url) {
 async function loadPageContent() {
     // console.log("reeesult---",getServerProjectsInfo(apiUrl))
     const projectsInfo = await getServerProjectsInfo(apiUrl)
-    // function to get Id from URL
+    // function to get Id from URL -> usar https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams 
     // function to convert the server response into nice data filtering by current project (Id of URL) - return an object with the current project data
     // function for DOM modification of HTML to add the project content
     // function to convert the server response into nice data filtering by ALL projects except of current project (Id of URL) - return an array of objects with the others projects data
@@ -28,4 +27,4 @@ async function loadPageContent() {
 
 window.addEventListener("load", () => {
     loadPageContent()
-  });
+});

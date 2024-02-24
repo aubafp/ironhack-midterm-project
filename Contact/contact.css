@@ -72,8 +72,8 @@
 
 }
 
-.redBackground {
-    background-color: var(--background-inputs-error) !important;
+#contact-section input.redBackground {
+    background-color: var(--background-inputs-error);
 }
 
 /* MOBILE RESPONSIVE */
