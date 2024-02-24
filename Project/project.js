@@ -44,7 +44,7 @@ function modifyProjectDetailHtml(projectObj) {
     const domTitle = document.querySelector("h1")
     const domSubtitleDescription = document.querySelector("#subtitleDescription")
     const domDateCompletion = document.querySelector("#dateCompletion")
-    const domImage = document.querySelector("#image")
+    const domImage = [...document.querySelectorAll("#image img")]
     const domGeneralDescription = document.querySelector("#generalDescription")
 
     // destructure object information into variables
@@ -54,7 +54,9 @@ function modifyProjectDetailHtml(projectObj) {
     domTitle.innerHTML = name
     domSubtitleDescription.innerHTML = description
     domDateCompletion.innerHTML = `<b>Completed on</b> ${completed_on}`
-    domImage.style.backgroundImage = `url(${image})` // CAMBIAR CON REFACTOR
+    domImage.forEach((img) => {
+        img.src = image
+    })
     domGeneralDescription.innerHTML = `<p>${content}</p>`
 }
 
@@ -63,6 +65,7 @@ function modifyOtherProjectsHtml(projectsArray) {
     // get DOM elements
     const articles = [...document.querySelectorAll("article")]
 
+    // for each article - get the inner html elems, deestructure object and modify DOM elements
     const image = document.querySelector("img")
     const titleArticle = document.querySelector("#titleArticle")
     const descriptionArticle = document.querySelector("#descriptionArticle")
