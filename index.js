@@ -1,11 +1,42 @@
-// Get button
+// HERO SECTION
 
+// Get in touch button
 const getInTouchBtn = document.querySelector("#getBtn")
 
 // Add event into Get in Touch button to navigate
-
 getInTouchBtn.addEventListener('click',() => {
     navigateToPage(contactPage) 
-    /* navigateToPage function defined in general.js file */
-    /* variable contactPage defined in general.js file */
+    // navigateToPage function defined in general.js file
+    // variable contactPage defined in general.js file
+})
+
+// PROJECTS SECTION
+
+// Get all articles in projects section
+const getArticlesIds = [...document.querySelectorAll(".projectsArticle")]
+
+// Function to generate project detail URL
+function generateProjectURL(id) {
+
+}
+
+// Function to get button from inside an article passed as parameter
+function getBtnOfArticle(article) {
+
+}
+
+// Function to add event listener to corresponding projects "Learn more" button to navigate to project page detail
+function addEventBtnProject(btn,url) {
+    btn.addEventListener('click',() => {
+        navigateToPage(url) 
+        //() navigateToPage function defined in general.js file
+    })
+}
+
+// For each article: get the id, generate the URL, add event listener
+getArticlesIds.forEach((article) => {
+    let id = article.getAttribute("data-project-id")
+    let url = generateProjectURL(id)
+    let btnToProject = getBtnOfArticle(article)
+    addEventBtnProject(btnToProject,url)
 })

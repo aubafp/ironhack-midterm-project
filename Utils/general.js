@@ -1,5 +1,4 @@
 // Get button
-
 const contactBtn = document.querySelector(".primaryButton")
 
 // Variable to save contact page absolute URL
