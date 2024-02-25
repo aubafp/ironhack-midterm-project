@@ -14,9 +14,13 @@
     --shadow-gray: rgba(0,0,0,0.25);
     --shadow-purple: rgba(157,0,239,0.25);
     --background-inputs: rgba(107,112,141,0.1);
+    --background-inputs-error: #FFA896;
   }
 
 /* GENERAL HTML DOC */
+html {
+    scroll-behavior: smooth
+}
 
 html, h1, h2, h3, h4, h5, h6, p, div, section, header, nav, ul {
     padding: 0;
@@ -177,7 +181,7 @@ nav ul {
 /* PROJECTS SECTION - for index.html and project.html */
 
 #projects-section {
-    margin-top: 100px; /* en realidad son 200px pero me parece demasiado, dejo 100 */
+    padding-top: 140px; /* en realidad son 200px pero me parece demasiado, dejo 140 */
     height: 561px;
     padding-left: 170px;
     padding-right: 170px;
@@ -198,7 +202,8 @@ nav ul {
 
 #projects-section img {
     height: 240px;
-    width: 340px;
+    max-width: 340px;
+    width: 100%;
 }
 
 #projects-section p {
@@ -221,7 +226,7 @@ nav ul {
     height: 500px;
     margin-left: 60px;
     margin-right: 60px;
-    margin-top: 100px;
+    margin-top: 200px; /* en realidad son 136 pero pongo mas para compensar el padding top de la anterior seccion */
     background-color: var(--secondary);
     padding-top: 136px;
     padding-bottom: 136px;
@@ -397,9 +402,9 @@ footer ul {
     /* PROJECTS */
 
     #projects-section {
-        margin-top: 0px;
         width: 100%;
         padding: 20px;
+        padding-top: 60px;
         height: 100%;
     }
 
@@ -427,7 +432,7 @@ footer ul {
         height: 400px;
         margin-left: 20px;
         margin-right: 20px;
-        margin-top: 40px;
+        margin-top: 80px;
         padding-top: 78px;
         text-align: center;
     }
@@ -483,9 +488,10 @@ footer ul {
     /* PROJECTS */
 
     #projects-section {
-        margin-top: 0px;
         width: 100%;
         padding: 20px;
+        padding-top: 60px;
+        max-height: 850px;
         height: 100%;
     }
 
@@ -505,6 +511,12 @@ footer ul {
 
     #projects-section h3 {
         padding-left: 60px;
+    }
+
+    /* CTA */
+
+    #cta-section {
+        margin-top: 80px;
     }
 
 }

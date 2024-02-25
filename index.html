@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home-Business Design</title>
+    <link rel="icon" href="/ironhack-midterm-project/Assets/Logos/circle.svg">
     <link rel="stylesheet" type="text/css" href="/ironhack-midterm-project/Utils/general.css" >
     <link rel="stylesheet" type="text/css" href="/ironhack-midterm-project/index.css" >
     <link rel="stylesheet" media="(media-features)" href="/ironhack-midterm-project/index.css" />
@@ -11,10 +12,10 @@
 </head>
 <body>
     <header id="home">
-        <a href="/ironhack-midterm-project/index.html#home"><img src="/ironhack-midterm-project/Assets/Logos/circle.svg" alt="Company Logo"></a>
+        <a href="/ironhack-midterm-project/index.html#hero-section"><img src="/ironhack-midterm-project/Assets/Logos/circle.svg" alt="Company Logo"></a>
         <nav class="headline-medium">
             <ul>
-                <li><a class="blueText" href="/ironhack-midterm-project/index.html#home">Home</a></li>
+                <li><a class="blueText" href="/ironhack-midterm-project/index.html#hero-section">Home</a></li>
                 <li><a href="/ironhack-midterm-project/index.html#projects-section">Projects</a></li>
                 <li><a href="/ironhack-midterm-project/index.html#services-section">Services</a></li>
             </ul>
@@ -26,7 +27,7 @@
             <h1>Empower Your Business With Stunning Design!</h1>
             <p class="body-regular">Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
             <div>
-                <button class="primaryButton headline-medium">Get in touch</button>
+                <button class="primaryButton headline-medium" id="getBtn">Get in touch</button>
                 <button class="tertiaryButton headline-medium">See our work</button>
             </div>
         </div>
@@ -51,19 +52,19 @@
     <section id="projects-section">
         <h3>Recent<br>Projects</h3>
         <div>
-            <article>
+            <article class="projectsArticle" data-project-id="1">
                 <img src="/ironhack-midterm-project/Assets/Projects/1.jpg" alt="Background image with colors">
                 <p class="body-medium">Simplify</p>
                 <p class="headline-regular">UI Design & App Development</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
             </article>
-            <article>
+            <article class="projectsArticle" data-project-id="2">
                 <img src="/ironhack-midterm-project/Assets/Projects/2.jpg" alt="Background image with colors">
                 <p class="body-medium">Dashcoin</p>
                 <p class="headline-regular">Web Development</p>
                 <button class="secondaryButton headline-regular">Learn more</button>
             </article>
-            <article>
+            <article class="projectsArticle" data-project-id="3">
                 <img src="/ironhack-midterm-project/Assets/Projects/3.jpg" alt="Background image with colors">
                 <p class="body-medium">Vectorify</p>
                 <p class="headline-regular">User Experience Design</p>
@@ -134,7 +135,7 @@
             <div id="cta-form-div">
                 <img src="/ironhack-midterm-project/Assets/CTA/mail.svg" alt="Icon of a mailbox">
                 <label for="email">Enter your email</label>
-                <input type="email", id="email", name="email">    
+                <input type="email", id="email", name="email">
                 <button class="primaryButton">Subscribe</button>
             </div>
         </form>
@@ -153,5 +154,7 @@
             <li>Privacy Policy</li>
         </ul>
     </footer>
+    <script type="module" src="/ironhack-midterm-project/index.js"></script>
+    <script type="module" src="/ironhack-midterm-project/Utils/general.js"></script>
 </body>
 </html>

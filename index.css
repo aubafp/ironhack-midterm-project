@@ -83,7 +83,7 @@
     height: 622px;
     margin-left: 60px;
     margin-right: 60px;
-    margin-top: 120px; /* en realidad son 200px pero me parece demasiado, dejo 120 */
+    margin-top: 300px; /* en realidad son 200px pero pongo mas para compensar el padding-top de la anterior seccion */
     background-color: var(--neutral-dark);
     background-image: url("./Assets/Testimonial/orbit.png");
     background-position: center center;
@@ -163,7 +163,7 @@
 /* SERVICES SECTION */
 
 #services-section {
-    margin-top: 100px; /* en realidad son 200px pero me parece demasiado, dejo 100 */
+    padding-top: 140px; /* en realidad son 200px pero me parece demasiado, dejo 140 */
     height: 561px;
     padding-left: 170px;
     padding-right: 170px;
@@ -193,12 +193,20 @@
     padding-right: 20px;
 }
 
+#services-section .round {
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--neutral-light-blue);
+}
+
 #services-section img {
     height: 40px;
     width: 40px;
-    background-color: var(--neutral-light-blue);
-    border-radius: 30px; /* If I put a higher value the icon is cut WTF?! */
-    padding: 24px;
 }
 
 #services-section .secondaryButton {
@@ -247,7 +255,7 @@
         height: 422px;
         margin-left: 20px;
         margin-right: 20px;
-        margin-top: 40px;
+        margin-top: 80px;
     }
 
     #emojiOne-testimonials,
@@ -269,9 +277,9 @@
     /* SERVICES */
 
     #services-section {
-        margin-top: 40px;
         width: 100%;
         padding: 20px;
+        padding-top: 60px;
         height: 100%;
     }
 
@@ -343,9 +351,9 @@
 
     /* SERVICES */
     #services-section {
-        margin-top: 40px;
         width: 100%;
         padding: 40px;
+        padding-top: 80px;
         height: 100%;
         gap: 10px;
     }

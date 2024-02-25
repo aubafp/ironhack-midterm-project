@@ -1,19 +1,27 @@
 /* DETAIL SECTION */
 
 #detail-section {
-    height: 1100px;
     margin-top: 200px;
     padding-left: 170px;
     padding-right: 170px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    gap: 80px;
+}
+
+#detail-section h1 {
+    margin-bottom: -60px;
 }
 
 #subtitle {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+}
+
+.grayColor {
+    color: var(--neutral-medium);
 }
 
 #image {
@@ -21,22 +29,38 @@
     width: 100%;
     max-height: 444px;
     height: 100%;
-    background-image: url("/ironhack-midterm-project/Assets/Projects/1.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 50%;
-    box-shadow: 0px 15px 50px var(--shadow-purple);
+}
+
+#image img {
+    width: 100%;
+    height: 444px;
+    object-fit: cover;
+}
+
+#image img:last-of-type {
+    position: relative;
+    top: -448px;
+}
+
+#blured {
+    filter: blur(10px);
+    opacity: 0.6;
 }
 
 /* PROJECT SECTION ADJUSTMENTS */
 
-#projects-section {
-    margin-top: 80px; /* Me invento la medida, me guusta mas */
-}
-
 #projects-section div {
     padding-top: 70px;
 }
+
+/* CTA SECTION ADJUSTMENTS in desktop */
+
+@media (min-width: 1026px) {
+    #cta-section {
+        margin-top: 300px;
+    }
+}
+
 
 /* MOBILE RESPONSIVE */
 
@@ -45,7 +69,6 @@
     /* DETAIL */
 
     #detail-section {
-        height: 1150px;
         padding-left: 30px;
         padding-right: 30px;
         margin-top: 100px;
@@ -53,6 +76,14 @@
 
     #image {
         max-height: 244px;
+    }
+
+    #image img {
+        height: 244px;
+    }
+    
+    #image img:last-of-type {
+        top: -248px;
     }
     
 }
@@ -67,6 +98,11 @@
         padding-left: 70px;
         padding-right: 70px;
         margin-top: 150px;
+    }
+
+    /* PROJECT SECTIONS ADJUSTMENTS */
+    #projects-section {
+        max-height: 1150px;
     }
     
 }
