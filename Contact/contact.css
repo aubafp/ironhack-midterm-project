@@ -76,6 +76,10 @@
     background-color: var(--background-inputs-error);
 }
 
+#contact-section .redBackground {
+    background-color: var(--background-inputs-error);
+}
+
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 620px) {

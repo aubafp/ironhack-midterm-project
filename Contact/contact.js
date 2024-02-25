@@ -62,31 +62,42 @@ function validateName(input) {
 
 // Function to validate the email
 function validateMail(input) {
-    // make it compulsory for consistency
-    // Usar regEx!!
-    // has "@"
-    // has ".com/es/something"
-    // has structure "something@something.something"
-
+    if (!input) { // No email introduced
+        return "The email is compulsory"
+    }
+    else if (/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(input) === false) {
+        return "The mail needs to match the format 'example@example.xxx'"
+    }
+    else {
+        return true
+    }
     // should return true if all is OK
     // should return the alert message if something is not OK
 }
 
 // Function to validate the phone
 function validatePhone(input) {
-    // only numbers
-    // 9 numbers
-    // start with 6
-
+    if (/^\d{9}$/.test(input) === false) {
+        return "The phone must contain 9 numerical digits"
+    }
+    else if (/^[67]/.test(input) === false) {
+        return "The phone must start by 6 or 7"
+    }
+    else {
+        return true
+    }
     // should return true if all is OK
     // should return the alert message if something is not OK
 }
 
 // Function to validate the message
 function validateMessage(input) {
-   // min characters
-   // max characters 
-
+    if (/^.{10,1000}$/.test(input) === false) {
+        return "The message must be between 10 and 1000 characters"
+    }
+    else {
+        return true
+    }
     // should return true if all is OK
     // should return the alert message if something is not OK
 }
