@@ -1,3 +1,6 @@
+// Imports
+import {generateProjectURL, getBtnOfArticle, addEventBtnProject} from '/ironhack-midterm-project/Utils/general.js'
+
 // HERO SECTION
 
 // Get in touch button
@@ -15,23 +18,7 @@ getInTouchBtn.addEventListener('click', () => {
 // Get all articles in projects section
 const getArticlesIds = [...document.querySelectorAll(".projectsArticle")]
 
-// Function to generate project detail URL
-function generateProjectURL(id) {
-    const origin = window.location.origin
-    return `${origin}/ironhack-midterm-project/Project/project.html?id=${id}`
-}
-
-// Function to get button from inside an article passed as parameter
-function getBtnOfArticle(article) {
-    return article.querySelector("button")
-}
-
-// Function to add event listener to corresponding projects "Learn more" button to navigate to project page detail
-function addEventBtnProject(btn, url) {
-    btn.addEventListener('click', () => {
-        navigateToPage(url) //() navigateToPage function defined in general.js file
-    })
-}
+// Functions used are in genreral.js, since they will also be needed in the projects.js file
 
 // For each article: get the id, generate the URL, get the button, and add event listener to the button to redirect to specific project detail
 getArticlesIds.forEach((article) => {

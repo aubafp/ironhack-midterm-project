@@ -1,3 +1,6 @@
+// Imports
+import {generateProjectURL, getBtnOfArticle, addEventBtnProject} from '/ironhack-midterm-project/Utils/general.js'
+
 // Definition of API URL to call
 const apiUrl = "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
 
@@ -8,6 +11,7 @@ async function getServerProjectsInfo(url) {
         return await response.json()
     } catch (err) {
         alert(err.message);
+        return []
     }
     // on success it returns the API response parsed into json format
 }
@@ -65,13 +69,27 @@ function modifyOtherProjectsHtml(projectsArray) {
     // get DOM elements
     const articles = [...document.querySelectorAll("article")]
 
-    // for each article - get the inner html elems, deestructure object and modify DOM elements
-    const image = document.querySelector("img")
-    const titleArticle = document.querySelector("#titleArticle")
-    const descriptionArticle = document.querySelector("#descriptionArticle")
-    const sendButton = document.querySelector("button")
+    // For each article....
+    articles.forEach((article, index) => {
 
-    // Separated function to add event listener in the Learn More button (reuse the one from index.js - or move it to general.js better)
+        // Get inner html elements
+        const domImage = article.querySelector("img")
+        const domTitleArticle = article.querySelector("#titleArticle")
+        const domDescriptionArticle = article.querySelector("#descriptionArticle")
+        const domLmoreButton = getBtnOfArticle(article)
+
+        // Destructure object
+        const {completed_on, content, description, image, name, uuid} = projectsArray[index];
+
+        // Modify DOM elements
+        domImage.src = image;
+        domTitleArticle.innerHTML = name;
+        domDescriptionArticle.innerHTML = description;
+
+        // Modify button: Generate and Add URL -> call general.js functions
+        let urlProject = generateProjectURL(uuid)
+        addEventBtnProject(domLmoreButton, urlProject)
+    })
 }
 
 
