@@ -73,13 +73,14 @@ function modifyOtherProjectsHtml(projectsArray) {
     articles.forEach((article, index) => {
 
         // Get inner html elements
-        const domImage = article.querySelector("img")
-        const domTitleArticle = article.querySelector("#titleArticle")
-        const domDescriptionArticle = article.querySelector("#descriptionArticle")
-        const domLmoreButton = getBtnOfArticle(article)
+        debugger
+        let domImage = article.querySelector("img")
+        let domTitleArticle = article.querySelector("#titleArticle")
+        let domDescriptionArticle = article.querySelector("#descriptionArticle")
+        let domLmoreButton = getBtnOfArticle(article)
 
         // Destructure object
-        const {completed_on, content, description, image, name, uuid} = projectsArray[index];
+        let {completed_on, content, description, image, name, uuid} = projectsArray[index];
 
         // Modify DOM elements
         domImage.src = image;
