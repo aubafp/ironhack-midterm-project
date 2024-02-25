@@ -13,18 +13,19 @@
     display: grid;
 
     grid-template-columns: 48% 4% 48%;
-    grid-template-areas: 
-    'name name name'
-    'email - phone'
-    'message message message'
-    'button button button';
+    grid-template-areas:
+        'name name name'
+        'email - phone'
+        'message message message'
+        'button button button';
 }
 
 #contact-section label {
     color: var(--neutral-medium)
 }
 
-#contact-section input, textarea {
+#contact-section input,
+textarea {
     background-color: var(--background-inputs);
     border: none;
     height: 70px;
@@ -38,8 +39,8 @@
 
 ::placeholder {
     color: var(--neutral-medium);
-  }
-  
+}
+
 
 #input-name {
     grid-area: name;

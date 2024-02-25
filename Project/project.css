@@ -81,11 +81,11 @@
     #image img {
         height: 244px;
     }
-    
+
     #image img:last-of-type {
         top: -248px;
     }
-    
+
 }
 
 /* TABLET RESPONSIVE */
@@ -104,5 +104,5 @@
     #projects-section {
         max-height: 1150px;
     }
-    
+
 }

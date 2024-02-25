@@ -35,7 +35,7 @@ function getInputValues() {
 
 // Function to check if an array contains any number
 function hasNumbers(input) {
-    return /\d/.test(input) 
+    return /\d/.test(input)
     // \d is a metacharacter that matches any digit from 0 to 9 (RegEx)
     // The test() method of RegExp instances executes a search with this regular expression for a match between a regular expression and a specified string. Returns true if there is a match; false otherwise.
     // should return true if the array contains any number
@@ -108,24 +108,24 @@ function validateForm(nameInput, emailInput, phoneInput, messageInput) {
     const [nameInputElem, emailInputElem, phoneInputElem, messageInputElem] = getInputElems();
 
     if (validateName(nameInput) != true && validateName(nameInput) != undefined) {
-        return [validateName(nameInput),nameInputElem]
+        return [validateName(nameInput), nameInputElem]
     }
     else if (validateMail(emailInput) != true && validateMail(emailInput) != undefined) {
-        return [validateMail(emailInput),emailInputElem]
+        return [validateMail(emailInput), emailInputElem]
     }
     else if (validatePhone(phoneInput) != true && validatePhone(phoneInput) != undefined) {
-        return [validatePhone(phoneInput),phoneInputElem]
+        return [validatePhone(phoneInput), phoneInputElem]
     }
     else if (validateMessage(messageInput) != true && validateMessage(messageInput) != undefined) {
-        return [validateMessage(messageInput),messageInputElem]
+        return [validateMessage(messageInput), messageInputElem]
     }
     else {
-        return [successMessage,null]
+        return [successMessage, null]
     }
     // returns a list
     // the fist position corresponds to the message:
-        // should return success message if all is OK 
-        // should return the alert message if something is not OK. Checking inputs in order, will return error message of the first wrong input
+    // should return success message if all is OK 
+    // should return the alert message if something is not OK. Checking inputs in order, will return error message of the first wrong input
     // the second position corresponds to the element that generate the error in form validation (if all is ok, it is null)
 }
 
@@ -144,7 +144,7 @@ function showAlert(message) {
 function backToInitialState() {
     const inputElems = getInputElems();
     inputElems.forEach((elem) => {
-        if(elem.classList.contains("redBackground")) {
+        if (elem.classList.contains("redBackground")) {
             elem.classList.remove("redBackground")
         }
     })
@@ -153,7 +153,7 @@ function backToInitialState() {
 // Function to remove all input values. To be used on form success
 function removeInputValues() {
     const inputElems = getInputElems()
-    inputElems.forEach((elem) => {    
+    inputElems.forEach((elem) => {
         elem.value = "";
     })
 }
@@ -182,6 +182,6 @@ function contactFormInputOutput() {
 
 // Add event into send button to send information
 
-sendBtn.addEventListener('click',() => {
+sendBtn.addEventListener('click', () => {
     contactFormInputOutput()
 })

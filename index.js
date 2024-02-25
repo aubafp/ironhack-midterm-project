@@ -1,5 +1,5 @@
 // Imports
-import {generateProjectURL, getBtnOfArticle, addEventBtnProject} from '/ironhack-midterm-project/Utils/general.js'
+import { generateProjectURL, getBtnOfArticle, addEventBtnProject } from '/ironhack-midterm-project/Utils/general.js'
 
 // HERO SECTION
 

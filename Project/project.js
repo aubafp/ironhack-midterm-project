@@ -1,5 +1,5 @@
 // Imports
-import {generateProjectURL, getBtnOfArticle, addEventBtnProject} from '/ironhack-midterm-project/Utils/general.js'
+import { generateProjectURL, getBtnOfArticle, addEventBtnProject } from '/ironhack-midterm-project/Utils/general.js'
 
 // Definition of API URL to call
 const apiUrl = "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
@@ -52,7 +52,7 @@ function modifyProjectDetailHtml(projectObj) {
     const domGeneralDescription = document.querySelector("#generalDescription")
 
     // destructure object information into variables
-    const {completed_on, content, description, image, name, uuid} = projectObj;
+    const { completed_on, content, description, image, name, uuid } = projectObj;
 
     // modify DOM elements content
     domTitle.innerHTML = name
@@ -80,7 +80,7 @@ function modifyOtherProjectsHtml(projectsArray) {
         let domLmoreButton = getBtnOfArticle(article)
 
         // Destructure object
-        let {completed_on, content, description, image, name, uuid} = projectsArray[index];
+        let { completed_on, content, description, image, name, uuid } = projectsArray[index];
 
         // Modify DOM elements
         domImage.src = image;

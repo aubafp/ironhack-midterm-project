@@ -12,7 +12,7 @@ function navigateToPage(page) {
 }
 
 // Add event into Contact Us button to navigate
-contactBtn.addEventListener('click',() => {
+contactBtn.addEventListener('click', () => {
     navigateToPage(contactPage)
 })
 
@@ -38,4 +38,4 @@ function addEventBtnProject(btn, url) {
 }
 
 // Exports
-export {generateProjectURL, getBtnOfArticle, addEventBtnProject};
+export { generateProjectURL, getBtnOfArticle, addEventBtnProject };
