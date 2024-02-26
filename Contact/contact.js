@@ -1,3 +1,16 @@
+// Imports
+import { contactBtn, navigateToPage } from '../Utils/general.js'
+
+// HEADER
+
+// Variable to save contact page absolute URL
+const contactPage = "../Contact/contact.html"
+
+// Add event into Contact Us button to navigate
+contactBtn.addEventListener('click', () => {
+    navigateToPage(contactPage)
+})
+
 // Definition success message of Form
 const successMessage = "Information submitted successfully. We will contact you by mail."
 

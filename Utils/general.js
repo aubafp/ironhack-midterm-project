@@ -3,26 +3,19 @@
 // Get button
 const contactBtn = document.querySelector(".primaryButton")
 
-// Variable to save contact page absolute URL
-const contactPage = "/ironhack-midterm-project/Contact/contact.html"
-
 // Function to navigate to any page
 function navigateToPage(page) {
     window.location.assign(page);
 }
 
-// Add event into Contact Us button to navigate
-contactBtn.addEventListener('click', () => {
-    navigateToPage(contactPage)
-})
-
 
 // --> PROJECTS SECTION: home page AND project detail page
 
 // Function to generate project detail URL
-function generateProjectURL(id) {
+function generateProjectURL(id,url) {
     const origin = window.location.origin
-    return `${origin}/ironhack-midterm-project/Project/project.html?id=${id}`
+    console.log(origin)
+    return `${origin}${url}${id}`
 }
 
 // Function to get button from inside an article passed as parameter
@@ -38,4 +31,4 @@ function addEventBtnProject(btn, url) {
 }
 
 // Exports
-export { generateProjectURL, getBtnOfArticle, addEventBtnProject };
+export { generateProjectURL, getBtnOfArticle, addEventBtnProject, contactBtn, navigateToPage };

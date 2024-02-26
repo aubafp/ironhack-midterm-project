@@ -1,5 +1,15 @@
 // Imports
-import { generateProjectURL, getBtnOfArticle, addEventBtnProject } from '/ironhack-midterm-project/Utils/general.js'
+import { generateProjectURL, getBtnOfArticle, addEventBtnProject, contactBtn, navigateToPage } from '../Utils/general.js'
+
+// HEADER
+
+// Variable to save contact page absolute URL
+const contactPage = "../Contact/contact.html"
+
+// Add event into Contact Us button to navigate
+contactBtn.addEventListener('click', () => {
+    navigateToPage(contactPage)
+})
 
 // Definition of API URL to call
 const apiUrl = "https://raw.githubusercontent.com/ironhack-jc/mid-term-api/main/projects"
@@ -64,6 +74,9 @@ function modifyProjectDetailHtml(projectObj) {
     domGeneralDescription.innerHTML = `<p>${content}</p>`
 }
 
+// Project detail relative URL
+const pdUrl = "/project.html?id=" // ESTO TAMPOCO VA ASDFASDFASD
+
 // Function for DOM modification of HTML to add the Other projects section content
 function modifyOtherProjectsHtml(projectsArray) {
     // get DOM elements
@@ -73,7 +86,6 @@ function modifyOtherProjectsHtml(projectsArray) {
     articles.forEach((article, index) => {
 
         // Get inner html elements
-        debugger
         let domImage = article.querySelector("img")
         let domTitleArticle = article.querySelector("#titleArticle")
         let domDescriptionArticle = article.querySelector("#descriptionArticle")
@@ -88,7 +100,7 @@ function modifyOtherProjectsHtml(projectsArray) {
         domDescriptionArticle.innerHTML = description;
 
         // Modify button: Generate and Add URL -> call general.js functions
-        let urlProject = generateProjectURL(uuid)
+        let urlProject = generateProjectURL(uuid, pdUrl)
         addEventBtnProject(domLmoreButton, urlProject)
     })
 }
