@@ -75,7 +75,7 @@ function modifyProjectDetailHtml(projectObj) {
 }
 
 // Project detail relative URL
-const pdUrl = "/project.html?id=" // ESTO TAMPOCO VA ASDFASDFASD
+const pdUrl = "/Project/project.html?id=" // ESTO TAMPOCO VA ASDFASDFASD
 
 // Function for DOM modification of HTML to add the Other projects section content
 function modifyOtherProjectsHtml(projectsArray) {

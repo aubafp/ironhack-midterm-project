@@ -31,7 +31,7 @@ const getArticlesIds = [...document.querySelectorAll(".projectsArticle")]
 // Functions used are in genreral.js, since they will also be needed in the projects.js file
 
 // Project detail relative URL
-const pdUrl = "./Project/project.html?id=" // ESTA MIERDA NO VA!!!!
+const pdUrl = "/Project/project.html?id=" // ESTA MIERDA NO VA!!!!
 
 // For each article: get the id, generate the URL, get the button, and add event listener to the button to redirect to specific project detail
 getArticlesIds.forEach((article) => {
