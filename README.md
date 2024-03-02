@@ -107,6 +107,7 @@ If I have had more time... I would have done the following developments / improv
     - refactor: part of the code for the Learn More buttons event and URL generation is dupicated in two files due to lack of expertise and lack of time
  
 - **General**
+    - CSS animations (on button hovers, etc)
     - develop a navbar hamburguer menu for responsive view
     - develop a more complete responsive footer (with all contet)
     - add loaders when something is loading (mainly in images when I get them from API)
